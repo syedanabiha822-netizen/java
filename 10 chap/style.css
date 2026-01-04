@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+}
+
+.box {
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  background: white;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+input {
+  padding: 8px;
+  width: 90%;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 8px 15px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+p {
+  margin-top: 15px;
+  font-weight: bold;
+}
