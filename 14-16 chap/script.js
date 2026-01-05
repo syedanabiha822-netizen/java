@@ -46,11 +46,10 @@ var result = "";
 for (var i = 0; i < names.length; i++) {
   var per = (scores[i] / totalMarks) * 100;
   result += names[i] + " scored " + scores[i] +
-            " marks (" + per.toFixed(2) + "%)<br>";
+   " marks (" + per.toFixed(2) + "%)<br>";
 }
 document.getElementById("q8").innerHTML =
 "<h2>Q8</h2>" + result;
-
 /* Q9 */
 var colors = ["Red", "Green", "Blue"];
 
@@ -64,6 +63,8 @@ colors.unshift("Purple", "Pink");
 colors.shift();
 colors.pop();
 
+
+
 var addIndex = prompt("Index to add color:");
 var addColor = prompt("Color name:");
 colors.splice(addIndex, 0, addColor);
@@ -74,3 +75,35 @@ colors.splice(delIndex, delCount);
 
 document.getElementById("q9").innerHTML =
 "<h2>Q9</h2>Final Colors Array:<br>" + colors;
+
+/* Q10 */
+var studentScores = [320, 230, 480, 120];
+studentScores.sort(function(a, b) {
+  return a - b;
+});
+document.getElementById("q10").innerHTML =
+"<h2>Q10</h2>Sorted Scores (Ascending): " + studentScores;
+
+/* Q11 */
+var cities = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar"];
+var selectedCities = cities.slice(1, 4);
+document.getElementById("q11").innerHTML =
+"<h2>Q11</h2>Cities: " + cities + "<br>Selected Cities: " + selectedCities;
+
+/* Q12 */
+var arr = ["This", "is", "my", "cat"];
+var sentence = arr.join(" ");
+document.getElementById("q12").innerHTML =
+"<h2>Q12</h2>Joined String: " + sentence;
+
+/* Q13 */
+var fifo = [];
+fifo.push("Keyboard");
+fifo.push("Mouse");
+fifo.push("Printer");
+
+var removedItem = fifo.shift();
+
+document.getElementById("q13").innerHTML =
+"<h2>Q13</h2>FIFO Example:<br>Removed: " + removedItem +
+"<br>Remaining: " + fifo;
