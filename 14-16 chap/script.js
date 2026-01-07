@@ -106,3 +106,5 @@ document.getElementById("q13").innerHTML =
   "<h2>Q13</h2>FIFO Example:<br>Removed: " + removedItem +
   "<br>Remaining: " + fifo;
   
+
+  
