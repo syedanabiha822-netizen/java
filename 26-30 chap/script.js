@@ -1,91 +1,92 @@
+var output = document.getElementById("output");
+
+
+var num1 = +prompt("Q1: Enter a positive number");
+output.innerHTML += `
+<div class="section">
+<h2>Q1: Positive Number</h2>
+<p>Number: ${num1}</p>
+<p>Round off: ${Math.round(num1)}</p>
+<p>Floor: ${Math.floor(num1)}</p>
+<p>Ceil: ${Math.ceil(num1)}</p>
+</div>
+`;
+
+
+var num2 = +prompt("Q2: Enter a negative floating number");
+output.innerHTML += `
+<div class="section">
+<h2>Q2: Negative Floating Number</h2>
+<p>Number: ${num2}</p>
+<p>Round off: ${Math.round(num2)}</p>
+<p>Floor: ${Math.floor(num2)}</p>
+<p>Ceil: ${Math.ceil(num2)}</p>
+</div>
+`;
+
+
+var num3 = +prompt("Q3: Enter any number (absolute value)");
+output.innerHTML += `
+<div class="section">
+<h2>Q3: Absolute Value</h2>
+<p>Number: ${num3}</p>
+<p>Absolute Value: ${Math.abs(num3)}</p>
+</div>
+`;
 
 
 
-// var randomNum = Math.ceil(Math.random() * 6) ;
-// console.log(randomNum);
+var dice = Math.floor(Math.random() * 6) + 1;
+output.innerHTML += `
+<div class="section">
+<h2>Q4: Dice Roll</h2>
+<p>Dice Value: ${dice}</p>
+</div>
+`;
+
+var toss = Math.floor(Math.random() * 2) + 1;
+var coinResult = toss === 1 ? "Heads" : "Tails";
+output.innerHTML += `
+<div class="section">
+<h2>Q5: Coin Toss</h2>
+<p>Result: ${coinResult}</p>
+</div>
+`;
+
+
+var randomNum = Math.floor(Math.random() * 100) + 1;
+output.innerHTML += `
+<div class="section">
+<h2>Q6: Random Number (1–100)</h2>
+<p>Random Number: ${randomNum}</p>
+</div>
+`;
 
 
 
-
-// //26 chap
-
-// // Math.round()
-// var num1 = 4.6;
-// var roundNum = Math.round(num1);
-// console.log("Round:", roundNum); // 5
-
-// // Math.floor()
-// var num2 = 4.9;
-// var floorNum = Math.floor(num2);
-// console.log("Floor:", floorNum); // 4
-
-// // Math.ceil()
-// var num3 = 4.1;
-// var ceilNum = Math.ceil(num3);
-// console.log("Ceil:", ceilNum); // 5
-
-// //27 chap
-
-// // Random number between 0 and 1
-// var randomNum = Math.random();
-// console.log("Random:", randomNum);
+var weightInput = prompt("Q7: Enter your weight");
+var weight = parseFloat(weightInput);
+output.innerHTML += `
+<div class="section">
+<h2>Q7: Weight</h2>
+<p>Your weight is: ${weight} kgs</p>
+</div>
+`;
 
 
+var secretNum = Math.floor(Math.random() * 10) + 1;
+var userGuess = +prompt("Q8: Guess the secret number (1–10)");
 
-// // Dice (1 to 6)
-// var dice = Math.floor(Math.random() * 6) + 1;
-// console.log("Dice Value:", dice);
-
-// // Coin Toss
-// var toss = Math.floor(Math.random() * 2) + 1;
-
-// if (toss === 1) {
-//   console.log("Heads");
-// } else {
-//   console.log("Tails")}
-//   //28 chap
-
-
-//   // parseInt
-// var str1 = "25";
-// var num1 = parseInt(str1);
-// console.log(num1 + 5); // 30
-
-// // parseFloat
-// var str2 = "3.75";
-// var num2 = parseFloat(str2);
-// console.log(num2); // 3.75
-
-
-// var str3 = "100Rs";
-// var num3 = parseInt(str3);
-// console.log(num3); // 100
-
-// // 29 chap
-// var number = 123;
-// var str = number.toString();
-// console.log(str);
-// console.log(typeof str); 
-
-
-// var num2 = 45.67;
-// var str2 = num2.toString();
-// console.log(str2);
-// console.log(typeof num2);  
-// User se choice lo
-
-
-var userChoice = prompt("Enter 0 for Head OR 1 for Tail");
-var laptopChoice = Math.floor(Math.random() * 2);
-
-if (userChoice == computerChoice) {
-  alert("User: " + userChoice + 
-        "\nComputer: " + computerChoice + 
-        "\nResult: You Won");
+var message;
+if (userGuess === secretNum) {
+  message = "🎉 Congratulations! You guessed the correct number.";
 } else {
-  alert("User: " + userChoice + 
-        "\nComputer: " + computerChoice + 
-        "\nResult: You Lose ");
+  message = "❌ Sorry! The secret number was " + secretNum;
 }
 
-
+output.innerHTML += `
+<div class="section">
+<h2>Q8: Secret Number Game</h2>
+<p>${message}</p>
+</div>
+`;
