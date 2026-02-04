@@ -1,22 +1,21 @@
 var output = document.getElementById("output");
 var now = new Date();
 
-/* ========== Q1 ========== */
+
 output.innerHTML += `
 <div class="section">
 <h2>Q1: Current Date & Time</h2>
 <p>${now}</p>
 </div>`;
 
-/* ========== Q2 ========== */
+
 var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 alert("Current Month: " + months[now.getMonth()]);
 
-/* ========== Q3 ========== */
 var days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 alert("Today is: " + days[now.getDay()]);
 
-/* ========== Q4 ========== */
+
 if (now.getDay() === 0 || now.getDay() === 6) {
   output.innerHTML += `
   <div class="section">
@@ -25,7 +24,7 @@ if (now.getDay() === 0 || now.getDay() === 6) {
   </div>`;
 }
 
-/* ========== Q5 ========== */
+
 var date = now.getDate();
 output.innerHTML += `
 <div class="section">
@@ -33,7 +32,7 @@ output.innerHTML += `
 <p>${date < 16 ? "First fifteen days of the month" : "Last days of the month"}</p>
 </div>`;
 
-/* ========== Q6 ========== */
+
 var minutesSince1970 = Math.floor(now.getTime() / (1000 * 60));
 output.innerHTML += `
 <div class="section">
@@ -41,10 +40,10 @@ output.innerHTML += `
 <p>Minutes since Jan 1, 1970: ${minutesSince1970}</p>
 </div>`;
 
-/* ========== Q7 ========== */
+
 alert(now.getHours() < 12 ? "It's AM" : "It's PM");
 
-/* ========== Q8 ========== */
+
 var laterDate = new Date(2020, 11, 31);
 output.innerHTML += `
 <div class="section">
@@ -52,7 +51,7 @@ output.innerHTML += `
 <p>${laterDate}</p>
 </div>`;
 
-/* ========== Q9 ========== */
+
 var ramadanStart = new Date("June 18, 2015");
 var diffDays = Math.floor((now - ramadanStart) / (1000 * 60 * 60 * 24));
 output.innerHTML += `
@@ -61,7 +60,7 @@ output.innerHTML += `
 <p>Days since 1st Ramadan: ${diffDays}</p>
 </div>`;
 
-/* ========== Q10 ========== */
+
 var start2015 = new Date("January 1, 2015");
 var secondsPassed = Math.floor((now - start2015) / 1000);
 output.innerHTML += `
@@ -70,7 +69,6 @@ output.innerHTML += `
 <p>Seconds since 1st Jan 2015: ${secondsPassed}</p>
 </div>`;
 
-/* ========== Q11 ========== */
 var futureHour = new Date();
 futureHour.setHours(futureHour.getHours() + 1);
 output.innerHTML += `
@@ -79,12 +77,12 @@ output.innerHTML += `
 <p>${futureHour}</p>
 </div>`;
 
-/* ========== Q12 ========== */
+
 var pastDate = new Date();
 pastDate.setFullYear(pastDate.getFullYear() - 100);
 alert("100 years back: " + pastDate);
 
-/* ========== Q13 ========== */
+
 var age = +prompt("Enter your age");
 var birthYear = now.getFullYear() - age;
 output.innerHTML += `
@@ -93,7 +91,7 @@ output.innerHTML += `
 <p>Your birth year is: ${birthYear}</p>
 </div>`;
 
-/* ========== Q14 ========== */
+
 var customerName = "ABC Customer";
 var units = 410;
 var chargesPerUnit = 16;
