@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Assignment 49-52</title>
+
+<style>
+table, th, td{
+border:1px solid black;
+border-collapse:collapse;
+padding:8px;
+margin-top:10px;
+}
+
+form{
+margin-bottom:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- ================= QUESTION 1 ================= -->
+<h2>Signup Form</h2>
+
+<form onsubmit="showData(); return false;">
+Name: <input type="text" id="name"><br><br>
+Email: <input type="email" id="email"><br><br>
+Password: <input type="password" id="password"><br><br>
+
+<button type="submit">Submit</button>
+</form>
+
+<h3>Form Data</h3>
+<p id="formData"></p>
+
+
+<!-- ================= QUESTION 2 ================= -->
+<h2>Item Details</h2>
+
+<p id="shortText">
+This is a mobile phone with great features.
+<button onclick="readMore()">Read More</button>
+</p>
+
+
+<!-- ================= QUESTION 3 ================= -->
+<h2>Student Form</h2>
+
+<form onsubmit="addStudent(); return false;">
+
+Name: <input type="text" id="studentName" required>
+Age: <input type="number" id="studentAge" required>
+Course: <input type="text" id="studentCourse" required>
+
+<button type="submit">Add Student</button>
+
+</form>
+
+
+<table id="studentTable">
+
+<tr>
+<th>Name</th>
+<th>Age</th>
+<th>Course</th>
+<th>Actions</th>
+</tr>
+
+</table>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
