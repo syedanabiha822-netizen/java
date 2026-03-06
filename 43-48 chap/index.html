@@ -1,13 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<title>JS Events Assignment</title>
+<style>
+table, th, td{
+border:1px solid black;
+border-collapse:collapse;
+padding:8px;
+}
+img{
+width:150px;
+margin:10px;
+cursor:pointer;
+}
+</style>
 </head>
-<body>
-    
 
-    <script src="script.js"></script>
+<body>
+
+<!-- ================= QUESTION 1 ================= -->
+<h2>Question 1</h2>
+<a href="#" onclick="showAlert()">Click this link</a>
+
+<br><br>
+
+<!-- ================= QUESTION 2 ================= -->
+<h2>Question 2</h2>
+
+<img src="https://via.placeholder.com/150" onclick="mobileMsg()">
+<img src="https://via.placeholder.com/150" onclick="mobileMsg()">
+<img src="https://via.placeholder.com/150" onclick="mobileMsg()">
+
+<br><br>
+
+<!-- ================= QUESTION 3 ================= -->
+<h2>Question 3</h2>
+
+<table id="studentTable">
+
+<tr>
+<th>Name</th>
+<th>Class</th>
+<th>Action</th>
+</tr>
+
+<tr>
+<td>Ali</td>
+<td>10</td>
+<td><button onclick="deleteRow(this)">Delete</button></td>
+</tr>
+
+<tr>
+<td>Ahmed</td>
+<td>10</td>
+<td><button onclick="deleteRow(this)">Delete</button></td>
+</tr>
+
+<tr>
+<td>Mark</td>
+<td>10</td>
+<td><button onclick="deleteRow(this)">Delete</button></td>
+</tr>
+
+<tr>
+<td>Sara</td>
+<td>10</td>
+<td><button onclick="deleteRow(this)">Delete</button></td>
+</tr>
+
+<tr>
+<td>John</td>
+<td>10</td>
+<td><button onclick="deleteRow(this)">Delete</button></td>
+</tr>
+
+<tr>
+<td>Ayesha</td>
+<td>10</td>
+<td><button onclick="deleteRow(this)">Delete</button></td>
+</tr>
+
+<tr>
+<td>Hina</td>
+<td>10</td>
+<td><button onclick="deleteRow(this)">Delete</button></td>
+</tr>
+
+<tr>
+<td>Usman</td>
+<td>10</td>
+<td><button onclick="deleteRow(this)">Delete</button></td>
+</tr>
+
+<tr>
+<td>Zara</td>
+<td>10</td>
+<td><button onclick="deleteRow(this)">Delete</button></td>
+</tr>
+
+<tr>
+<td>Bilal</td>
+<td>10</td>
+<td><button onclick="deleteRow(this)">Delete</button></td>
+</tr>
+
+</table>
+
+<br><br>
+
+<!-- ================= QUESTION 4 ================= -->
+<h2>Question 4</h2>
+
+<img id="changeImg"
+src="https://via.placeholder.com/150"
+onmouseover="changePicture()"
+onmouseout="originalPicture()">
+
+<br><br>
+
+<!-- ================= QUESTION 5 ================= -->
+<h2>Question 5</h2>
+
+<h3 id="counter">0</h3>
+
+<button onclick="increase()">Increase</button>
+<button onclick="decrease()">Decrease</button>
+<script src="script.js"></script>
 </body>
 </html>
+
